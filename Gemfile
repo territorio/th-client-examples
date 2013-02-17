@@ -1,10 +1,22 @@
-# A sample Gemfile
-source "http://rubygems.org"
-
-#gem "rake"
-gem 'therubyracer', :platform => :ruby
+source "https://rubygems.org"
 
 
 gem "rack"
-gem "rake-pipeline", :git => "https://github.com/livingsocial/rake-pipeline.git"
-gem "rake-pipeline-web-filters", :git => "https://github.com/wycats/rake-pipeline-web-filters.git"
+
+group :assets do
+
+  gem 'therubyracer', '~> 0.11.2'
+  gem "execjs"
+  gem "colored"
+  gem "jshintrb"
+  gem "less", "~> 2.2.2"
+
+  gem 'rake-pipeline',  github: 'livingsocial/rake-pipeline'
+  gem 'rake-pipeline-web-filters', github: 'wycats/rake-pipeline-web-filters'
+  gem 'rake-pipeline-i18n-filters'
+  gem 'coffee-script'
+  gem 'tilt'
+  gem 'uglifier'
+  gem 'yui-compressor'
+
+end

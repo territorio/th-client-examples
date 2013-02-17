@@ -9,17 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta charset="utf-8">
 
-		<script type="text/javascript">
-			function onBodyLoad() {		
-
-				document.addEventListener("deviceready", function() {
-					minispade.require('app');
-				}, false);
-			}
-        </script>
   </head>
 
-<body onload="onBodyLoad();">
+<body >
 
   <div id="init-app" >
 
@@ -37,4 +29,11 @@
 
 <script type="text/javascript">
 	minispade.require('app'); // DEBUG_ONLY
+
+    var examples = location.search.match(/example=([^&]+)/),
+        example;
+
+    if ( examples ) {
+        minispade.require('app/examples/'+examples[1]); 
+    }
 </script>

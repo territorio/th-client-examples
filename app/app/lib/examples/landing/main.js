@@ -17,14 +17,13 @@ Th.Application = Em.Application.extend({
       selectedCategory: Th.CategoryAllType,
       isAsideLeft: false,
       events: events
-      //events: null
+      //events: []
     });
     view.appendTo('#init-app');
 
     App.view = view;
 
   },
-
 
   loadData: function() {
     App.store.findAll(Th.Category);

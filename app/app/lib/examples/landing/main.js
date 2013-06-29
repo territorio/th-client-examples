@@ -15,10 +15,10 @@ Th.Application = Em.Application.extend({
       categories: categories,
       //selectedCategory: App.store.find(Th.Category, 1),
       selectedCategory: Th.CategoryAllType,
-      isAsideLeft: false,
+      isAsideLeft: true,
       selectedDate: new Date(),
-      //events: events,
-      events: null
+      events: events
+      //events: null
     });
     view.appendTo('#init-app');
 

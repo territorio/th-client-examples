@@ -8,12 +8,15 @@ Th.Application = Em.Application.extend({
 
     console.log('app is ready');
     var categories = App.store.findAll(Th.Category);
+    var places = App.store.findAll(Th.Place);
     var events = App.store.findAll(Th.Event);
 
     var view = Th.LandingScreenView.create({
       container: this.__container__,
       categories: categories,
+      places: places,
       //selectedCategory: App.store.find(Th.Category, 1),
+      selectedPlace: null,
       selectedCategory: Th.CategoryAllType,
       isAsideLeft: true,
       selectedDate: new Date(),
@@ -28,6 +31,7 @@ Th.Application = Em.Application.extend({
 
   loadData: function() {
     App.store.findAll(Th.Category);
+    App.store.findAll(Th.Place);
     App.store.findAll(Th.Event);
   },
 

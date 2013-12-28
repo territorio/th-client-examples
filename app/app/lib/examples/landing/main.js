@@ -19,6 +19,8 @@ Th.Application = Em.Application.extend({
       selectedPlace: null,
       selectedCategory: Th.CategoryAllType,
       isAsideLeft: true,
+      isSearch: true,
+      selectionName: 'hola',
       selectedDate: new Date(),
       events: events
       //events: null
